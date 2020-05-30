@@ -1,6 +1,7 @@
-﻿using System.Numerics;
+﻿using System;
+using System.Numerics;
 
-namespace _10_PerlinTurbulence
+namespace _11_PerlinNoiseMarbled
 {
     public class Noise_texture : Texture
     {
@@ -20,7 +21,7 @@ namespace _10_PerlinTurbulence
 
         public override Vector3 Value(float u, float v, Vector3 p)
         {
-            return new Vector3(1) * this.Noise.Turb(this.Scale * p);
+            return new Vector3(1) * 0.5f * (1.0f + (float)Math.Sin(this.Scale * p.Z + 10 * this.Noise.Turb(p)));
         }
     }
 }

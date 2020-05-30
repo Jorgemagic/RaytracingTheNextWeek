@@ -9,21 +9,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02-BoundingVolumeHierarchie
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03-SolidTextures", "03-SolidTextures\03-SolidTextures.csproj", "{3B21D58C-AABA-4D86-8909-A2A91E570344}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-CheckeredTexture", "04-CheckeredTexture\04-CheckeredTexture.csproj", "{7FB5E013-D57A-4616-8C57-74704331112D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04-CheckeredTexture", "04-CheckeredTexture\04-CheckeredTexture.csproj", "{7FB5E013-D57A-4616-8C57-74704331112D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-PerlinNoise", "05-PerlinNoise\05-PerlinNoise.csproj", "{E8453310-E77B-48D8-9C9F-E687CCD61199}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05-PerlinNoise", "05-PerlinNoise\05-PerlinNoise.csproj", "{E8453310-E77B-48D8-9C9F-E687CCD61199}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06-PerlinTrilinearInterpolation", "06-PerlinTrilinearInterpolation\06-PerlinTrilinearInterpolation.csproj", "{8A497E52-15AF-4696-A825-9E574CA6938D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06-PerlinTrilinearInterpolation", "06-PerlinTrilinearInterpolation\06-PerlinTrilinearInterpolation.csproj", "{8A497E52-15AF-4696-A825-9E574CA6938D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07-PerlinHermitianSmoothing", "07-PerlinHermitianSmoothing\07-PerlinHermitianSmoothing.csproj", "{63725150-D03E-4A6B-84E7-B0D96138C6F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07-PerlinHermitianSmoothing", "07-PerlinHermitianSmoothing\07-PerlinHermitianSmoothing.csproj", "{63725150-D03E-4A6B-84E7-B0D96138C6F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08-PerlinHigherFrequency", "08-PerlinHigherFrequency\08-PerlinHigherFrequency.csproj", "{7F3D343D-C2FE-4D8F-AF4A-C17A23E0012B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08-PerlinHigherFrequency", "08-PerlinHigherFrequency\08-PerlinHigherFrequency.csproj", "{7F3D343D-C2FE-4D8F-AF4A-C17A23E0012B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09-PerlinShiftedOffIntegerValues", "09-PerlinShiftedOffIntegerValues\09-PerlinShiftedOffIntegerValues.csproj", "{E49EB451-008B-44FC-A686-C99AF60520EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09-PerlinShiftedOffIntegerValues", "09-PerlinShiftedOffIntegerValues\09-PerlinShiftedOffIntegerValues.csproj", "{E49EB451-008B-44FC-A686-C99AF60520EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10-PerlinTurbulence", "10-PerlinTurbulence\10-PerlinTurbulence.csproj", "{6539245B-C299-4E09-AB92-3D4DF1056CF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10-PerlinTurbulence", "10-PerlinTurbulence\10-PerlinTurbulence.csproj", "{6539245B-C299-4E09-AB92-3D4DF1056CF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "102-Test", "102-Test\102-Test.csproj", "{74C8CA7F-FF78-420B-80A7-C0A5C98FD955}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11-PerlinNoiseMarbled", "11-PerlinNoiseMarbled\11-PerlinNoiseMarbled.csproj", "{FA956F8E-DC99-42DA-9811-1244903A136A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,10 +71,10 @@ Global
 		{6539245B-C299-4E09-AB92-3D4DF1056CF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6539245B-C299-4E09-AB92-3D4DF1056CF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6539245B-C299-4E09-AB92-3D4DF1056CF9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{74C8CA7F-FF78-420B-80A7-C0A5C98FD955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{74C8CA7F-FF78-420B-80A7-C0A5C98FD955}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{74C8CA7F-FF78-420B-80A7-C0A5C98FD955}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{74C8CA7F-FF78-420B-80A7-C0A5C98FD955}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA956F8E-DC99-42DA-9811-1244903A136A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA956F8E-DC99-42DA-9811-1244903A136A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA956F8E-DC99-42DA-9811-1244903A136A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA956F8E-DC99-42DA-9811-1244903A136A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
