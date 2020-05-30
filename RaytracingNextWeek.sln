@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09-PerlinShiftedOffIntegerV
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10-PerlinTurbulence", "10-PerlinTurbulence\10-PerlinTurbulence.csproj", "{6539245B-C299-4E09-AB92-3D4DF1056CF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11-PerlinNoiseMarbled", "11-PerlinNoiseMarbled\11-PerlinNoiseMarbled.csproj", "{FA956F8E-DC99-42DA-9811-1244903A136A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11-PerlinNoiseMarbled", "11-PerlinNoiseMarbled\11-PerlinNoiseMarbled.csproj", "{FA956F8E-DC99-42DA-9811-1244903A136A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12-ImageTexture", "12-ImageTexture\12-ImageTexture.csproj", "{2B5A395C-C186-4321-9B30-740D82C43B45}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{FA956F8E-DC99-42DA-9811-1244903A136A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA956F8E-DC99-42DA-9811-1244903A136A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA956F8E-DC99-42DA-9811-1244903A136A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B5A395C-C186-4321-9B30-740D82C43B45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B5A395C-C186-4321-9B30-740D82C43B45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B5A395C-C186-4321-9B30-740D82C43B45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B5A395C-C186-4321-9B30-740D82C43B45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
