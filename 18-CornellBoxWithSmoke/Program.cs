@@ -2,7 +2,7 @@
 using System.IO;
 using System.Numerics;
 
-namespace _17_StandardCornellBox
+namespace _18_CornellBoxWithSmoke
 {
     public class Program
     {
@@ -13,24 +13,25 @@ namespace _17_StandardCornellBox
             var red = new Lambertian(new Solid_Color(.65f, .05f, .05f));
             var white = new Lambertian(new Solid_Color(.73f, .73f, .73f));
             var green = new Lambertian(new Solid_Color(.12f, .45f, .15f));
-            var light = new Diffuse_light(new Solid_Color(15, 15, 15));
+            var light = new Diffuse_light(new Solid_Color(7, 7, 7));
 
             objects.Add(new Flip_face(new YZ_rect(0, 555, 0, 555, 555, green)));
             objects.Add(new YZ_rect(0, 555, 0, 555, 0, red));
-            objects.Add(new XZ_rect(213, 343, 227, 332, 554, light));
-            objects.Add(new Flip_face(new XZ_rect(0, 555, 0, 555, 0, white)));
-            objects.Add(new XZ_rect(0, 555, 0, 555, 555, white));
+            objects.Add(new XZ_rect(113, 443, 127, 432, 554, light));
+            objects.Add(new Flip_face(new XZ_rect(0, 555, 0, 555, 555, white)));
+            objects.Add(new XZ_rect(0, 555, 0, 555, 0, white));
             objects.Add(new Flip_face(new XY_rect(0, 555, 0, 555, 555, white)));
 
             HitTable box1 = new Box(new Vector3(0, 0, 0), new Vector3(165, 330, 165), white);
             box1 = new Rotate_y(box1, 15);
-            box1 = new Translate(box1, new Vector3(265, 0, 295));
-            objects.Add(box1);
+            box1 = new Translate(box1, new Vector3(265, 0, 295));            
 
             HitTable box2 = new Box(new Vector3(0, 0, 0), new Vector3(165, 165, 165), white);
             box2 = new Rotate_y(box2, -18);
             box2 = new Translate(box2, new Vector3(130, 0, 65));
-            objects.Add(box2);
+
+            objects.Add(new Constant_medium(box1, 0.01f, new Solid_Color(0, 0, 0)));
+            objects.Add(new Constant_medium(box2, 0.01f, new Solid_Color(1, 1, 1)));
 
             return objects;
         }

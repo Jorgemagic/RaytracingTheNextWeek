@@ -29,13 +29,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12-ImageTexture", "12-Image
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13-RectangleLight", "13-RectangleLight\13-RectangleLight.csproj", "{2B4CD406-4EB3-4AAA-B8C1-D8FA30770E54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14-EmptyCornellBox", "14-EmptyCornellBox\14-EmptyCornellBox.csproj", "{B7B2D75A-CFBE-47E7-9BD6-35CB0FAE1D34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "14-EmptyCornellBox", "14-EmptyCornellBox\14-EmptyCornellBox.csproj", "{B7B2D75A-CFBE-47E7-9BD6-35CB0FAE1D34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15-EmptyCornellBoxFixedWalls", "15-EmptyCornellBoxFixedWalls\15-EmptyCornellBoxFixedWalls.csproj", "{6A282999-5554-4ACF-9684-2A380F5F72FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "15-EmptyCornellBoxFixedWalls", "15-EmptyCornellBoxFixedWalls\15-EmptyCornellBoxFixedWalls.csproj", "{6A282999-5554-4ACF-9684-2A380F5F72FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16-CornellBoxTwoBlocks", "16-CornellBoxTwoBlocks\16-CornellBoxTwoBlocks.csproj", "{5361D25D-5489-4563-9FEC-5ADE6859A628}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "16-CornellBoxTwoBlocks", "16-CornellBoxTwoBlocks\16-CornellBoxTwoBlocks.csproj", "{5361D25D-5489-4563-9FEC-5ADE6859A628}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17-StandardCornellBox", "17-StandardCornellBox\17-StandardCornellBox.csproj", "{18E50EDD-A9F6-4E6E-B49E-725D514F3F4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "17-StandardCornellBox", "17-StandardCornellBox\17-StandardCornellBox.csproj", "{18E50EDD-A9F6-4E6E-B49E-725D514F3F4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18-CornellBoxWithSmoke", "18-CornellBoxWithSmoke\18-CornellBoxWithSmoke.csproj", "{1BBFAD31-75EF-47B9-9AB4-FC9FB031ACF5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +113,10 @@ Global
 		{18E50EDD-A9F6-4E6E-B49E-725D514F3F4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18E50EDD-A9F6-4E6E-B49E-725D514F3F4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18E50EDD-A9F6-4E6E-B49E-725D514F3F4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BBFAD31-75EF-47B9-9AB4-FC9FB031ACF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BBFAD31-75EF-47B9-9AB4-FC9FB031ACF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BBFAD31-75EF-47B9-9AB4-FC9FB031ACF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BBFAD31-75EF-47B9-9AB4-FC9FB031ACF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
