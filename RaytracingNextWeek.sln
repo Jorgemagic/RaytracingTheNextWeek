@@ -39,6 +39,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "17-StandardCornellBox", "17
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18-CornellBoxWithSmoke", "18-CornellBoxWithSmoke\18-CornellBoxWithSmoke.csproj", "{1BBFAD31-75EF-47B9-9AB4-FC9FB031ACF5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19-FinalRender", "19-FinalRender\19-FinalRender.csproj", "{2C20107A-E40A-476B-A1F3-6C5E4A328D9D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{1BBFAD31-75EF-47B9-9AB4-FC9FB031ACF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BBFAD31-75EF-47B9-9AB4-FC9FB031ACF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BBFAD31-75EF-47B9-9AB4-FC9FB031ACF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C20107A-E40A-476B-A1F3-6C5E4A328D9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C20107A-E40A-476B-A1F3-6C5E4A328D9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C20107A-E40A-476B-A1F3-6C5E4A328D9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C20107A-E40A-476B-A1F3-6C5E4A328D9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
