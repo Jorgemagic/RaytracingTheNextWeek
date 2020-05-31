@@ -10,8 +10,6 @@ Implementation of the Peter Shirley's book in .NETCore CSharp
 ![alt Motion Blur](https://github.com/Jorgemagic/RaytracingTheNextWeek/blob/master/Screenshots/01-Image.png)				   
 ### [02 Bounding Volume Hierarchies](02-BoundingVolumeHierarchies/)
 
-![alt Bounding Volume Hierarchies](https://github.com/Jorgemagic/RaytracingTheNextWeek/blob/master/Screenshots/02-Image.png)
-
 ### [03 Solid Textures](03-SolidTextures/)
 
 ![alt Solid Textures](https://github.com/Jorgemagic/RaytracingTheNextWeek/blob/master/Screenshots/03-Image.png)
@@ -22,7 +20,7 @@ Implementation of the Peter Shirley's book in .NETCore CSharp
 
 ### [05 Perlin Noise](05-PerlinNoise/)
 
-![alt Perlin Noise](https://github.com/Jorgemagic/RaytracingTheNextWeek/blob/master/Screenshots/05-Image.png)
+![alt Perlin Noise](https://github.com/Jorgemagic/RaytracingTheNextWeek/blob/master/Screenshots/05-Image.png)					https://github.com/Jorgemagic/RaytracingTheNextWeek/blob/master/Screenshots/05-image.png
 
 ### [06 Perlin Trilinear Interpolation](06-PerlinTrilinearInterpolation/)
 
@@ -54,7 +52,9 @@ Implementation of the Peter Shirley's book in .NETCore CSharp
 
 ### [13 Rectangle Light](13-RectangleLight/)
 
-![alt Rectangle Light](https://github.com/Jorgemagic/RaytracingTheNextWeek/blob/master/Screenshots/13-Image.png)
+![alt Rectangle Light](https://github.com/Jorgemagic/RaytracingTheNextWeek/blob/master/Screenshots/13_1-Image.png)
+
+![alt Rectangle Light And Sphere](https://github.com/Jorgemagic/RaytracingTheNextWeek/blob/master/Screenshots/13_2-Image.png)
 
 ### [14 Empty Cornell Box](14-EmptyCornellBox/)
 
