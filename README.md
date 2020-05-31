@@ -20,7 +20,7 @@ Implementation of the Peter Shirley's book in .NETCore CSharp
 
 ### [05 Perlin Noise](05-PerlinNoise/)
 
-![alt Perlin Noise](https://github.com/Jorgemagic/RaytracingTheNextWeek/blob/master/Screenshots/05-Image.png)					https://github.com/Jorgemagic/RaytracingTheNextWeek/blob/master/Screenshots/05-image.png
+![alt Perlin Noise](https://github.com/Jorgemagic/RaytracingTheNextWeek/blob/master/Screenshots/05-Image.png)
 
 ### [06 Perlin Trilinear Interpolation](06-PerlinTrilinearInterpolation/)
 
