@@ -6,65 +6,6 @@ namespace _08_PerlinHigherFrequency
 {
     public class Program
     {
-        public static Hitable_List Random_Scene()
-        {
-            Hitable_List world = new Hitable_List();
-
-            var checker = new Checker_texture(
-                new Solid_Color(0.2f, 0.3f, 0.1f),
-                new Solid_Color(0.9f, 0.9f, 0.9f));
-
-            world.Add(new Sphere(new Vector3(0, -1000, 0), 1000, new Lambertian(checker)));
-
-            for (int a = -11; a < 11; a++)
-            {
-                for (int b = -11; b < 11; b++)
-                {
-                    float choose_mat = (float)Helpers.random.NextDouble();
-                    Vector3 center = new Vector3(a + 0.9f * (float)Helpers.random.NextDouble(), 0.2f, b + 0.9f * (float)Helpers.random.NextDouble());
-
-                    if ((center - new Vector3(4, 0.2f, 0)).Length() > 0.9f)
-                    {
-                        Material sphere_material;
-
-                        if (choose_mat < 0.8f)
-                        {
-                            // diffuse
-                            Vector3 albedo = Helpers.RandomVector3(0, 1) * Helpers.RandomVector3(0, 1);
-                            sphere_material = new Lambertian(new Solid_Color(albedo));
-                            var center2 = center + new Vector3(0, Helpers.RandomFloat(0, 0.5f), 0);
-                            world.Add(new Moving_Sphere(center, center2, 0.0f, 1.0f, 0.2f, sphere_material));
-                        }
-                        else if (choose_mat < 0.95f)
-                        {
-                            // metal
-                            Vector3 albedo = Helpers.RandomVector3(0.5f, 1.0f);
-                            float fuzz = Helpers.RandomFloat(0, 0.5f);
-                            sphere_material = new Metal(albedo, fuzz);
-                            world.Add(new Sphere(center, 0.2f, sphere_material));
-                        }
-                        else
-                        {
-                            // glass
-                            sphere_material = new Dielectric(1.5f);
-                            world.Add(new Sphere(center, 0.2f, sphere_material));
-                        }
-                    }
-                }
-            }
-
-            var material1 = new Dielectric(1.5f);
-            world.Add(new Sphere(new Vector3(0, 1, 0), 1.0f, material1));
-
-            var material2 = new Lambertian(new Solid_Color(new Vector3(0.4f, 0.2f, 0.1f)));
-            world.Add(new Sphere(new Vector3(-4, 1, 0), 1.0f, material2));
-
-            var material3 = new Metal(new Vector3(0.7f, 0.6f, 0.5f), 0.0f);
-            world.Add(new Sphere(new Vector3(4, 1, 0), 1.0f, material3));
-
-            return world;
-        }
-
         public static Hitable_List Two_Perlin_Spheres()
         {
             Hitable_List objects = new Hitable_List();

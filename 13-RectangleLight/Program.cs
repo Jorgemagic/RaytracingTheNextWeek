@@ -2,38 +2,44 @@
 using System.IO;
 using System.Numerics;
 
-namespace _12_ImageTexture
+namespace _13_RectangleLight
 {
     public class Program
     {
-        public static Hitable_List Earth()
+        public static Hitable_List Simple_Light()
         {
-            var earth_texture = new Image_texture("Resources/earthmap.jpg");
-            var earth_surface = new Lambertian(earth_texture);
-            var globe = new Sphere(new Vector3(0, 0, 0), 2, earth_surface);
+            Hitable_List objects = new Hitable_List();
 
-            return new Hitable_List(globe);
+            var pertext = new Noise_texture(4);
+            objects.Add(new Sphere(new Vector3(0, -1000, 0), 1000, new Lambertian(pertext)));
+            objects.Add(new Sphere(new Vector3(0, 2, 0), 2, new Lambertian(pertext)));
+
+            var difflight = new Diffuse_light(new Solid_Color(4, 4, 4));
+            objects.Add(new Sphere(new Vector3(0, 7, 0), 2, difflight));
+            objects.Add(new XY_rect(3, 5, 1, 3, -2, difflight));
+
+            return objects;
         }
 
-        static Vector3 Ray_color(Ray r, HitTable world, int depth)
+        static Vector3 Ray_color(Ray r, Vector3 background, HitTable world, int depth)
         {
             Hit_Record rec = default;
             // If we've exceeded the ray bounce limit, no more light is gathered.
             if (depth <= 0)
                 return Vector3.Zero;
 
-            if (world.Hit(r, 0.001f, Helpers.Infinity, ref rec))
-            {
-                Ray scattered;
-                Vector3 attenuation;
-                if (rec.Mat_ptr.Scatter(r, rec, out attenuation, out scattered))
-                    return attenuation * Ray_color(scattered, world, depth - 1);
-                return Vector3.Zero;
-            }
+            // If the ray hits nothing, return the background color.
+            if (!world.Hit(r, 0.001f, Helpers.Infinity, ref rec))
+                return background;
 
-            Vector3 unit_direction = Vector3.Normalize(r.Direction);
-            var t = 0.5f * (unit_direction.Y + 1.0f);
-            return (1.0f - t) * new Vector3(1.0f, 1.0f, 1.0f) + t * new Vector3(0.5f, 0.7f, 1.0f);
+            Ray scattered;
+            Vector3 attenuation;
+            Vector3 emitted = rec.Mat_ptr.Emitted(rec.U, rec.V, rec.P);
+
+            if (!rec.Mat_ptr.Scatter(r, rec, out attenuation, out scattered))
+                return emitted;
+
+            return emitted + attenuation * Ray_color(scattered, background, world, depth - 1);
         }
 
         static void Write_color(StreamWriter file, Vector3 pixel_color, int samples_per_pixel)
@@ -74,13 +80,14 @@ namespace _12_ImageTexture
                 var vertical = new Vector3(0, viewport_height, 0);
                 var lower_left_corner = origin - horizontal / 2 - vertical / 2 - new Vector3(0, 0, focal_length);
 
-                Hitable_List world = Earth();
+                Hitable_List world = Simple_Light();
 
-                Vector3 lookfrom = new Vector3(13, 2, 3);
-                Vector3 lookat = new Vector3(0, 0, 0);
+                Vector3 lookfrom = new Vector3(23, 4, 5f);
+                Vector3 lookat = new Vector3(0, 2, 0);
                 Vector3 vup = new Vector3(0, 1, 0);
-                float dist_to_focus = 10.0f;
+                float dist_to_focus = 20.0f;
                 float aperture = 0.0f;
+                Vector3 background = new Vector3(0.0f, 0.0f, 0.0f);
 
                 Camera cam = new Camera(lookfrom, lookat, vup, 20, aspect_ratio, aperture, dist_to_focus, 0.0f, 1.0f);
 
@@ -95,7 +102,7 @@ namespace _12_ImageTexture
                             float u = (float)(i + Helpers.random.NextDouble()) / (image_width - 1);
                             float v = (float)(j + Helpers.random.NextDouble()) / (image_height - 1);
                             Ray r = cam.Get_Ray(u, v);
-                            pixel_color += Ray_color(r, world, max_depth);
+                            pixel_color += Ray_color(r, background, world, max_depth);
                         }
                         Write_color(file, pixel_color, samples_per_pixel);
                     }
