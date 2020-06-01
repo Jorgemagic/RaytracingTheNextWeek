@@ -59,7 +59,7 @@ namespace _15_EmptyCornellBoxFixedWalls
             }
             else
             {
-                objects.Sort((int)start, (int)end, comparator);
+                objects.Sort((int)start, (int)(end - start), comparator);
 
                 var mid = start + object_span / 2;
                 left = new BVH_Node(objects, start, mid, time0, time1);

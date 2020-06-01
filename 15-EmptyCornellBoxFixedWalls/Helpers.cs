@@ -117,7 +117,7 @@ namespace _15_EmptyCornellBoxFixedWalls
             return new AABB(small, big);
         }
 
-        public static bool Box_compare(HitTable a, HitTable b, int axis)
+        public static int Box_compare(HitTable a, HitTable b, int axis)
         {
             AABB box_a = null;
             AABB box_b = null;
@@ -125,7 +125,15 @@ namespace _15_EmptyCornellBoxFixedWalls
             if (!a.Bounding_box(0, 0, out box_a) || !b.Bounding_box(0, 0, out box_b))
                 Console.WriteLine("No bounding box in bvh_node constructor.");
 
-            return Helpers.Vector3GetValue(box_a.min, axis) < Helpers.Vector3GetValue(box_b.min, axis);
-        }        
+            if (Helpers.Vector3GetValue(box_a.min, axis) < Helpers.Vector3GetValue(box_b.min, axis))
+            {
+                return -1;
+            }
+            else
+            {
+                return 1;
+            }
+
+        }
     }
 }

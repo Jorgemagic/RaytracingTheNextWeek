@@ -7,7 +7,7 @@ namespace _02_BoundingVolumeHierarchies
     {
         public int Compare([AllowNull] HitTable x, [AllowNull] HitTable y)
         {
-            return (Helpers.Box_compare(x, y, 0)) ? 0 : 1;
+            return Helpers.Box_compare(x, y, 0);
         }
     }
 
@@ -15,7 +15,7 @@ namespace _02_BoundingVolumeHierarchies
     {
         public int Compare([AllowNull] HitTable x, [AllowNull] HitTable y)
         {
-            return (Helpers.Box_compare(x, y, 1)) ? 0 : 1;
+            return Helpers.Box_compare(x, y, 1);
         }
     }
 
@@ -23,7 +23,7 @@ namespace _02_BoundingVolumeHierarchies
     {
         public int Compare([AllowNull] HitTable x, [AllowNull] HitTable y)
         {
-            return (Helpers.Box_compare(x, y, 2)) ? 0 : 1;
+            return Helpers.Box_compare(x, y, 2);
         }
     }
 }
