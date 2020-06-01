@@ -30,7 +30,7 @@ namespace _19_FinalRender
 
             Hitable_List objects = new Hitable_List();
 
-            objects.Add(boxes1); // new BVH_Node(boxes1, 0, 1));
+            objects.Add(new BVH_Node(boxes1, 0, 1));
 
             var light = new Diffuse_light(new Solid_Color(7, 7, 7));
             objects.Add(new XZ_rect(123, 423, 147, 412, 554, light));
@@ -49,7 +49,7 @@ namespace _19_FinalRender
             boundary = new Sphere(new Vector3(0, 0, 0), 5000, new Dielectric(1.5f));
             objects.Add(new Constant_medium(boundary, .0001f, new Solid_Color(1, 1, 1)));
 
-            var emat = new Lambertian(new Image_texture("Resources/earthmap.jpg"));
+            var emat = new Lambertian(new Image_texture("Resources/earthmap2.png"));
             objects.Add(new Sphere(new Vector3(400, 200, 400), 100, emat));
             var pertext = new Noise_texture(0.1f);
             objects.Add(new Sphere(new Vector3(220, 280, 300), 80, new Lambertian(pertext)));
@@ -64,7 +64,7 @@ namespace _19_FinalRender
 
             objects.Add(new Translate(
                 new Rotate_y(
-                    boxes2,15), //new BVH_Node(boxes2, 0.0f, 1.0f), 15),
+                    new BVH_Node(boxes2, 0.0f, 1.0f), 15),
                     new Vector3(-100, 270, 395)
                 )
             );
@@ -133,7 +133,7 @@ namespace _19_FinalRender
 
                 Hitable_List world = Final_scene();
 
-                Vector3 lookfrom = new Vector3(278, 278, -800);
+                Vector3 lookfrom = new Vector3(478, 278, -600);
                 Vector3 lookat = new Vector3(278, 278, 0);
                 Vector3 vup = new Vector3(0, 1, 0);
                 float dist_to_focus = 10.0f;
