@@ -4,7 +4,7 @@ Implementation of the Peter Shirley's [book](https://raytracing.github.io/books/
 ## Related Work
 
 - [Raytracing in One Weekend](https://github.com/Jorgemagic/RaytracingInOneWeekend)
-- [Raytracing the rest of your life](https://github.com/Jorgemagic/RaytracingTheRestOfYourLife)
+- [Raytracing the Rest of Your Life](https://github.com/Jorgemagic/RaytracingTheRestOfYourLife)
 
 ### [01 Motion Blur](01-MotionBlur/)
 
